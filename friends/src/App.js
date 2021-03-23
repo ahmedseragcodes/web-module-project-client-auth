@@ -37,7 +37,7 @@ const [formValues, setFormValues]=useState({
     axios.post("http://localhost:5000/api/login", formValues)
     .then((res)=>{
       console.log("SUCCESSFULLY POSTED LOGIN CREDS", res);
-      localStorage.setItem("token", res.data.payload);
+      localStorage.setItem("token", JSON.stringify(res.data.payload));
       history.push("/friends")
     })
     .catch((err)=>{
