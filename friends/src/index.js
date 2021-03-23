@@ -1,13 +1,27 @@
+//TECH IMPORTS 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import logger from "redux-logger";
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+//STYLING IMPORTS 
+import './index.css';
+//COMP IMPORTS
+import App from './App';
+import reducer from "./components/reducer";
+
+
+const store=createStore(reducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
+  <Router>
     <App />
-  </React.StrictMode>,
+  </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
