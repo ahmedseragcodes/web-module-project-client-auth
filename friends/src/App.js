@@ -52,7 +52,6 @@ const [formValues, setFormValues]=useState({
     <div className="frontPageNav">
      <Link to="/">Home</Link>
      <Link to="/">Login</Link>
-     <Link to="/friends">Friends</Link>
      </div>
      <h1>Lambdalorians Club</h1>
      <h2>Login</h2>
