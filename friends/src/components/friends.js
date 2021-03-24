@@ -1,12 +1,10 @@
 //TECH IMPORTS
 import React, { useEffect } from "react";
-import axios from "axios";
 import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 //STYLING IMPORTS
 import "../index.css";
 //COMPONENT IMPORTS
-import axiosWithAuth from "./axiosWithAuth";
 import { fetchFriends } from "./actions";
 
 
@@ -26,6 +24,7 @@ const Friends = (props) => {
 
     useEffect(()=>{
         props.fetchFriends();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return (

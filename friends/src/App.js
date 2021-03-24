@@ -5,7 +5,6 @@ import axios from "axios";
 import { Route, Link, useHistory } from "react-router-dom";
 //COMPONENT IMPORTS
 import { fetchFriends } from "./components/actions";
-import axiosWithAuth from "./components/axiosWithAuth";
 import PrivateRoute from "./components/PrivateRoute";
 import Friends from "./components/friends";
 
