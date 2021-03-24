@@ -1,5 +1,4 @@
-import axios from "axios";
-import React from "react";
+
 import axiosWithAuth from "./axiosWithAuth";
 
 export const FETCH_FRIENDS_START="FETCH_FRIENDS_START";
