@@ -37,7 +37,7 @@ const [formValues, setFormValues]=useState({
     axios.post("http://localhost:5000/api/login", formValues)
     .then((res)=>{
       console.log("SUCCESSFULLY POSTED LOGIN CREDS", res);
-      localStorage.setItem("token", JSON.stringify(res.data.payload));
+      localStorage.setItem("token", res.data.payload);
       history.push("/friends")
     })
     .catch((err)=>{
@@ -68,7 +68,7 @@ const [formValues, setFormValues]=useState({
      </form>
    </Route>
    <PrivateRoute path="/friends">
-     <Friends />
+     <Friends setFormValues={setFormValues} />
    </PrivateRoute>
    </div>
   );

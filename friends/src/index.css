@@ -36,6 +36,7 @@ a, link {
   box-shadow: 1rem 1rem 1rem 0rem black;
   padding: 1rem;
   border-radius: 1rem;
+  font-weight: bold;
 }
 h1 {
   margin-top: 3rem;
@@ -43,6 +44,7 @@ h1 {
 }
 h2 {
   font-size: 1.9rem;
+  margin: 2rem;
 }
 button {
   border-radius: 1rem;
@@ -52,4 +54,12 @@ button {
   color: black;
   background-color: white;
   font-size: 1.5rem;
+}
+.friendsIndividualDiv {
+  box-shadow: 1rem 1rem 1rem 0rem black, -1rem -1rem 1.75rem .25rem black;
+  margin: 2.5rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
 }

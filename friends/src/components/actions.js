@@ -8,7 +8,8 @@ export const FETCH_FRIENDS_FAILURE="FETCH_FRIENDS_FAILURE";
 
 export const fetchFriends = () => dispatch => {
     dispatch ({ type: FETCH_FRIENDS_START })
-    axiosWithAuth().get("http://localhost:5000/api/friends").then((res)=>{
+    axiosWithAuth().get("http://localhost:5000/api/friends")
+    .then((res)=>{
         console.log("SUCCESSFULLY FETCHED FRIENDS", res);
         dispatch({ type: FETCH_FRIENDS_SUCCESS, payload: res.data })
     })
